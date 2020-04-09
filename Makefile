@@ -165,7 +165,7 @@ run-noaccel: image
 CLEANFILES+=	$(OUTDIR)/image/disk.vmdk
 
 vmdk-image: image
-	$(Q) $(QEMU_IMG) convert -f raw -O vmdk -o compat6 $(IMAGE) $(IMAGE:.raw=.vmdk)
+	$(Q) $(QEMU_IMG) convert -f raw -O vmdk $(IMAGE) $(IMAGE:.raw=.vmdk)
 
 ##############################################################################
 # GCE
